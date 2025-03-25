@@ -29,4 +29,4 @@ def add_krypto(item : Item, db : Session = Depends(get_db)):
 		price = gecko.symbol_price(item.symbol)
 		if price:
 			return crud.create_krypto(db, item.symbol, item.price)
-	return {"error": "not exist"}
+	return {"error": "not saved"}
